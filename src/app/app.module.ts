@@ -7,10 +7,20 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { SucessoCadastroComponent } from './sucesso-cadastro/sucesso-cadastro.component';
+import { FormsModule } from '@angular/forms';
+import { MensagemComponent } from './components/mensagem/mensagem.component';
+import { MaiorIdadeDirective } from './directives/maior-idade.directive';
+import { HttpClientModule } from '@angular/common/http';
+import { ValidaCepDirective } from './directives/valida-cep.directive';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, CadastroComponent, SucessoCadastroComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, CadastroComponent, SucessoCadastroComponent, MensagemComponent, MaiorIdadeDirective, ValidaCepDirective],
+  imports: [
+    BrowserModule, 
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
